@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-const Navbar = () => {
+const Navbar = ({ cart }) => {
   return (
     <header className="text-gray-600 body-font">
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
@@ -34,6 +34,12 @@ const Navbar = () => {
           </Link>
           <Link href={"/about"} className="mr-5 hover:text-gray-900">
             About Us
+          </Link>
+          <Link href={"/cart"} className="mr-5 hover:text-gray-900">
+            Cart ({cart.length})
+          </Link>
+          <Link href={"/checkout"} className="mr-5 hover:text-gray-900">
+            Checkout
           </Link>
         </nav>
         <button className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
